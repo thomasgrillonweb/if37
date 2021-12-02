@@ -14,6 +14,9 @@ class QrContainer extends Component {
 
     handleScan(data){
         console.log(data)
+        if(data){
+            alert(data)
+        }
         this.setState({
             result: data
         })
