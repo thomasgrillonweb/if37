@@ -1,16 +1,16 @@
+import { useState } from "react";
+import "./Scan.css"
 import { Link } from "react-router-dom";
 import QrContainer from "./components/QrContainer";
 
-function Scan() {
+import { AiOutlineMenuFold } from "react-icons/ai";
 
-    const handleOnClickMenuButton = () => {
-      alert("wwooohh");
-    }
+function Scan() {
   
     return (
       <div className="Scan">
         <QrContainer />
-        <Link to={"/menu"} className={'menu-btn'}>Menu</Link>
+        <Link to={"/menu"} className={'menu-btn'}><AiOutlineMenuFold /></Link>
       </div>
     );
   }

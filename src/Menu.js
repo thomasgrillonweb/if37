@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
+import './Menu.css'
 
 function Menu() {
   return (
-    <div>
-      <Link to={"/"}>Scanner</Link><br/>
-      <Link to={"/params"}>Paramètre</Link>
+    <div className="background">
+      <div className="page-menu">
+        <div className="title">MENU</div>
+        <div className="btn btn-white"><Link to={"/"}>JE SCANNE</Link></div>
+        <div className="btn btn-white"><Link to={"/allergies"}>MES ALLERGIES</Link></div>
+        <div className="btn btn-white"><Link to={"/community"}>COMMUNAUTÉ</Link></div>
+        <div className="btn btn-white"><Link to={"/params"}>PARMÈTRES</Link></div>
+        <div className="btn btn-white"><Link to={"/historique"}>HISTORIQUE</Link></div>
+      </div>
     </div>
   );
 }

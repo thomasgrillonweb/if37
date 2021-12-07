@@ -1,0 +1,21 @@
+.indicateur{
+    position: absolute;
+    height: 75vw;
+    width: 75vw;
+    top: 25%;
+    left: 12%;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.isGood {
+    background-color: green;
+}
+
+.isNotGood {
+    background-color: rgb(128, 0, 0);
+}
+
+.isNull {
+    display: none;
+}

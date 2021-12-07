@@ -1,0 +1,42 @@
+.background {
+    background-color: rgb(255, 210, 112);
+    height: 100vh;
+}
+
+.page-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-menu .btn {
+    border: 1px solid black;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.page-menu .btn a {
+    text-decoration: none;
+    color: black;
+}
+
+.page-menu .title {
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.btn-white {
+    background-color: rgba(255, 253, 240, 0.877);
+}

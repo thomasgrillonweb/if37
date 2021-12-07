@@ -1,25 +1,34 @@
 import React, { Component } from "react";
-import reactDom from "react-dom";
+import "./QrContainer.css"
 import QrReader from "react-qr-reader";
+import Indicateur from "./Indicateur";
 
 class QrContainer extends Component {
 
     constructor(props) {
         super(props)
-        this.state = {
-            result: 'Hold QR Code Steady and clear to scan'
-        }
         this.handleScan = this.handleScan.bind(this)
+        this.state = {
+            isGood: null
+        }
     }
 
     handleScan(data){
-        console.log(data)
         if(data){
-            alert(data)
+            if(this.state.isGood === null){
+                if(data === "c'est ok"){
+                    this.setState({
+                        isGood: true
+                    })
+                }else if(data === "c'est pas ok"){
+                    this.setState({
+                        isGood: false
+                    })
+                }else{
+                    console.log('null')
+                }
+            }
         }
-        this.setState({
-            result: data
-        })
     }
 
     handleError(err) {
@@ -28,8 +37,8 @@ class QrContainer extends Component {
 
     render() {
         const  previewStyle = {
-            height: 700,
-            width: 1000,
+            height: "100vh",
+            width: "100vw",
             display: 'flex',
             justifyContent: "center"
         }
@@ -40,15 +49,25 @@ class QrContainer extends Component {
             marginTop: "-50px"
         }
 
-        const textStyle = {
-            fontSize: "30px",
-            textAlign: "center",
-            marginTop: '-50px'
-        }
+        const handleOnClick = (isGood) => {
+            if(isGood === true){
+                this.setState({
+                    isGood: null
+                })
+            }
+            if(isGood === false){
+                console.log("Click - C'est pas good")
+            }
+            if(isGood === null){
+                console.log("C'est null sm, mais c'est bizarre que ca arrive hummmm")
+            }
+        } 
 
         return (<div>
             <React.Fragment>
-                <div style={camStyle}>
+                <div 
+                className="qr-container"
+                style={camStyle}>
                     <QrReader
                         delay={100}
                         style={previewStyle}
@@ -56,9 +75,7 @@ class QrContainer extends Component {
                         onScan={this.handleScan}
                     />
                 </div>
-                <p style={textStyle}>
-                    {this.state.result}
-                </p>
+                <Indicateur isGood={this.state.isGood} handleOnClick={handleOnClick}/>
             </React.Fragment>
         </div>);
     }
