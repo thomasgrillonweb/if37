@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import './Allergens.css'
 
-function Allergenes() {
+function Allergens() {
   return (
     <div className="background">
       <div className="page-menu">
@@ -15,4 +15,4 @@ function Allergenes() {
   );
 }
 
-export default Allergenes;
+export default Allergens;
