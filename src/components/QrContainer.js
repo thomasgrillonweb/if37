@@ -9,7 +9,7 @@ class QrContainer extends Component {
         super(props)
         this.handleScan = this.handleScan.bind(this)
         this.state = {
-            isGood: false
+            isGood: null
         }
     }
 
