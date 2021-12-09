@@ -9,7 +9,7 @@ class QrContainer extends Component {
         super(props)
         this.handleScan = this.handleScan.bind(this)
         this.state = {
-            isGood: null
+            isGood: false
         }
     }
 
@@ -56,7 +56,7 @@ class QrContainer extends Component {
                 })
             }
             if(isGood === false){
-                console.log("Click - C'est pas good")
+                window.location.href = '/allergens';
             }
             if(isGood === null){
                 console.log("C'est null sm, mais c'est bizarre que ca arrive hummmm")
@@ -67,7 +67,13 @@ class QrContainer extends Component {
             <React.Fragment>
                 <div 
                 className="qr-container"
-                style={camStyle}>
+                style={camStyle}
+                onClick={() => {
+                    this.setState({
+                        isGood: null
+                    })
+                }}
+                >
                     <QrReader
                         delay={100}
                         style={previewStyle}

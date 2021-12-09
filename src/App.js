@@ -5,17 +5,14 @@ import QrContainer from './components/QrContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Scan from './Scan';
 import Menu from './Menu';
+import Allergenes from './Allergens';
 
 function App() {
-
-  const handleOnClickMenuButton = () => {
-    alert("wwooohh");
-  }
-
   return (
     <BrowserRouter>
       <Routes>
         <Route exact path="/menu" element={<Menu />}/>
+        <Route exact path="/allergens" element={<Allergenes />}/>
         <Route path="/" element={<Scan />}/>
       </Routes>
     </BrowserRouter>
