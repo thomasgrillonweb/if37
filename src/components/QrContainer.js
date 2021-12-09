@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./QrContainer.css"
 import QrReader from "react-qr-reader";
 import Indicateur from "./Indicateur";
+import { Navigate } from "react-router-dom";
 
 class QrContainer extends Component {
 
@@ -9,7 +10,8 @@ class QrContainer extends Component {
         super(props)
         this.handleScan = this.handleScan.bind(this)
         this.state = {
-            isGood: null
+            isGood: false,
+            redirectTo: false
         }
     }
 
@@ -36,6 +38,11 @@ class QrContainer extends Component {
     }
 
     render() {
+
+        if(this.state.redirectTo !== false) {
+            return <Navigate to={this.state.redirectTo} />
+        }
+
         const  previewStyle = {
             height: "100vh",
             width: "100vw",
@@ -56,7 +63,9 @@ class QrContainer extends Component {
                 })
             }
             if(isGood === false){
-                window.location.href = '/allergens';
+                this.setState({
+                    redirectTo: "/allergens"
+                })
             }
             if(isGood === null){
                 console.log("C'est null sm, mais c'est bizarre que ca arrive hummmm")
