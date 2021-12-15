@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Scan.css"
 import { Link } from "react-router-dom";
 import QrContainer from "./components/QrContainer";
