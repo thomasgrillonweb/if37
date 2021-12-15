@@ -1,0 +1,28 @@
+.post {
+    background-color: rgb(238, 207, 150);
+    padding: 1em;
+    width: 85%;
+    margin: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 7px;
+}
+
+.post > * {
+    margin-top: 0.3em;
+}
+
+.post > .title {
+    font-size: 1.2em;
+    border-bottom: solid 1px black;
+    padding-bottom: 0.3em;
+}
+
+.post > .content {
+    
+}
+
+.post > .date {
+    display: flex;
+    flex-direction: row-reverse;
+}

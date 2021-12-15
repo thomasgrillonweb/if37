@@ -1,6 +1,7 @@
 .background {
     background-color: rgb(255, 210, 112);
-    height: 100vh;
+    min-height: 100vh;
+    height: max-content;
 }
 
 .page-menu {
