@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://saimelapanik.com/static/css/main.db24c34a.chunk.css",
-    "main.js": "https://saimelapanik.com/static/js/main.69062f9e.chunk.js",
-    "main.js.map": "https://saimelapanik.com/static/js/main.69062f9e.chunk.js.map",
+    "main.js": "https://saimelapanik.com/static/js/main.0781abd7.chunk.js",
+    "main.js.map": "https://saimelapanik.com/static/js/main.0781abd7.chunk.js.map",
     "runtime-main.js": "https://saimelapanik.com/static/js/runtime-main.ff9b6ab8.js",
     "runtime-main.js.map": "https://saimelapanik.com/static/js/runtime-main.ff9b6ab8.js.map",
     "static/js/2.a39087cc.chunk.js": "https://saimelapanik.com/static/js/2.a39087cc.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.ff9b6ab8.js",
     "static/js/2.a39087cc.chunk.js",
     "static/css/main.db24c34a.chunk.css",
-    "static/js/main.69062f9e.chunk.js"
+    "static/js/main.0781abd7.chunk.js"
   ]
 }

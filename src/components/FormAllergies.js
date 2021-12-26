@@ -5,7 +5,10 @@ import { useEffect } from "react";
 const FormAllergies = (props) => {
 
     const { register, handleSubmit, getValues } = useForm();  
-    const userAllergens = JSON.parse(localStorage.getItem('userAllergens'));
+    let userAllergens = JSON.parse(localStorage.getItem('userAllergens'));
+    if(userAllergens === null){
+      userAllergens = [];
+    }
 
     useEffect(() => {
       return () => {
