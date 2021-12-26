@@ -16,18 +16,38 @@ class QrContainer extends Component {
     }
 
     handleScan(data){
-        if(data){
-            if(this.state.isGood === null){
-                if(data === "c'est ok"){
-                    this.setState({
-                        isGood: true
-                    })
-                }else if(data === "c'est pas ok"){
-                    this.setState({
-                        isGood: false
-                    })
-                }else{
-                    console.log('null')
+        if(this.state.isGood === null){
+            console.log('Scanning...')
+            if(data === 'no allergens in this product'){
+                localStorage.setItem('productAllergens', JSON.stringify([]))
+                this.setState({
+                    isGood: true
+                })
+            }else{
+                let tabData = JSON.parse(data);
+                if(Array.isArray(tabData)){
+                    //c'est un tableau contenant des allergènes
+                    const userAllergens = JSON.parse(localStorage.getItem('userAllergens'));
+                    localStorage.setItem('productAllergens', JSON.stringify(tabData))
+                    if(userAllergens !== null){
+                        for(let i=0; i<userAllergens.length; i++){
+                            for(let j=0; j<tabData.length; j++){
+                                if(userAllergens[i] === tabData[j]){
+                                    this.setState({
+                                        isGood: false
+                                    })
+                                    return;
+                                }
+                            }
+                        }
+                        this.setState({
+                            isGood: true
+                        })
+                    }else{
+                        this.setState({
+                            isGood: true
+                        })
+                    }
                 }
             }
         }
@@ -59,7 +79,7 @@ class QrContainer extends Component {
         const handleOnClick = (isGood) => {
             if(isGood === true){
                 this.setState({
-                    isGood: null
+                    redirectTo: "/allergens"
                 })
             }
             if(isGood === false){

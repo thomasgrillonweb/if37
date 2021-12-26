@@ -1,0 +1,20 @@
+.form-allergens{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-allergens .select-form-allergens{
+    height: 74vh
+}
+
+.form-allergens .select-form-allergens .option-select{
+    font-size: 2em;
+    width: 60%;
+    margin: auto;
+    padding: 0.3em;
+}
+
+.form-allergens .submit-btn{
+    padding: 1em;
+    font-size: 1.5em;
+}
