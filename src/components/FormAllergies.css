@@ -4,7 +4,9 @@
 }
 
 .form-allergens .select-form-allergens{
-    height: max-content
+    height: max-content;
+    min-height: 150px;
+    size: 5;
 }
 
 .form-allergens .select-form-allergens .option-select{
