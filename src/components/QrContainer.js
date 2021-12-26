@@ -15,39 +15,47 @@ class QrContainer extends Component {
         }
     }
 
+    addHistory(product) {
+        let history = JSON.parse(localStorage.getItem('historyAllergens'));
+        if(history === null){
+            history = [];
+        }
+
+        history.push(product)
+        localStorage.setItem('historyAllergens', JSON.stringify(history));
+    } 
+
     handleScan(data){
         if(this.state.isGood === null){
             console.log('Scanning...')
-            if(data === 'no allergens in this product'){
-                localStorage.setItem('productAllergens', JSON.stringify([]))
-                this.setState({
-                    isGood: true
-                })
-            }else{
-                let tabData = JSON.parse(data);
-                if(Array.isArray(tabData)){
-                    //c'est un tableau contenant des allergènes
-                    const userAllergens = JSON.parse(localStorage.getItem('userAllergens'));
-                    localStorage.setItem('productAllergens', JSON.stringify(tabData))
-                    if(userAllergens !== null){
-                        for(let i=0; i<userAllergens.length; i++){
-                            for(let j=0; j<tabData.length; j++){
-                                if(userAllergens[i] === tabData[j]){
-                                    this.setState({
-                                        isGood: false
-                                    })
-                                    return;
-                                }
+            let parseData = JSON.parse(data);
+            console.log(parseData)
+            if(parseData?.allergens && parseData?.product && Array.isArray(parseData.allergens)){
+
+                this.addHistory(parseData);
+
+                const tabData = parseData.allergens;
+                //c'est un tableau contenant des allergènes
+                const userAllergens = JSON.parse(localStorage.getItem('userAllergens'));
+                localStorage.setItem('productAllergens', JSON.stringify(parseData))
+                if(userAllergens !== null){
+                    for(let i=0; i<userAllergens.length; i++){
+                        for(let j=0; j<tabData.length; j++){
+                            if(userAllergens[i] === tabData[j]){
+                                this.setState({
+                                    isGood: false
+                                })
+                                return;
                             }
                         }
-                        this.setState({
-                            isGood: true
-                        })
-                    }else{
-                        this.setState({
-                            isGood: true
-                        })
                     }
+                    this.setState({
+                        isGood: true
+                    })
+                }else{
+                    this.setState({
+                        isGood: true
+                    })
                 }
             }
         }

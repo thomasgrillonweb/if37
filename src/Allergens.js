@@ -13,9 +13,10 @@ function Allergens() {
   return (
     <div className="background">
       <div className="page-menu">
-        <div className="title">Allergènes</div>  
+        <div className="title">Allergènes</div>
+        <div className="product">{productAllergens.product}</div>  
 
-        {productAllergens.map((element, index) => {
+        {productAllergens.allergens.map((element, index) => {
           let isRisky = userAllergens.includes(element);
           return <div className={isRisky ? 'btn btn-white isRisky' : 'btn btn-white'} key={index}>{element}</div>
         })}

@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "https://saimelapanik.com/static/css/main.1ae50da0.chunk.css",
-    "main.js": "https://saimelapanik.com/static/js/main.0781abd7.chunk.js",
-    "main.js.map": "https://saimelapanik.com/static/js/main.0781abd7.chunk.js.map",
-    "runtime-main.js": "https://saimelapanik.com/static/js/runtime-main.ff9b6ab8.js",
-    "runtime-main.js.map": "https://saimelapanik.com/static/js/runtime-main.ff9b6ab8.js.map",
-    "static/js/2.a39087cc.chunk.js": "https://saimelapanik.com/static/js/2.a39087cc.chunk.js",
-    "static/js/2.a39087cc.chunk.js.map": "https://saimelapanik.com/static/js/2.a39087cc.chunk.js.map",
-    "static/js/3.39362115.chunk.js": "https://saimelapanik.com/static/js/3.39362115.chunk.js",
-    "static/js/3.39362115.chunk.js.map": "https://saimelapanik.com/static/js/3.39362115.chunk.js.map",
+    "main.css": "https://saimelapanik.com/static/css/main.b0e028ed.chunk.css",
+    "main.js": "https://saimelapanik.com/static/js/main.9538267c.chunk.js",
+    "main.js.map": "https://saimelapanik.com/static/js/main.9538267c.chunk.js.map",
+    "runtime-main.js": "https://saimelapanik.com/static/js/runtime-main.bf133254.js",
+    "runtime-main.js.map": "https://saimelapanik.com/static/js/runtime-main.bf133254.js.map",
+    "static/js/2.9e349b65.chunk.js": "https://saimelapanik.com/static/js/2.9e349b65.chunk.js",
+    "static/js/2.9e349b65.chunk.js.map": "https://saimelapanik.com/static/js/2.9e349b65.chunk.js.map",
+    "static/js/3.81902715.chunk.js": "https://saimelapanik.com/static/js/3.81902715.chunk.js",
+    "static/js/3.81902715.chunk.js.map": "https://saimelapanik.com/static/js/3.81902715.chunk.js.map",
     "index.html": "https://saimelapanik.com/index.html",
-    "static/css/main.1ae50da0.chunk.css.map": "https://saimelapanik.com/static/css/main.1ae50da0.chunk.css.map",
-    "static/js/2.a39087cc.chunk.js.LICENSE.txt": "https://saimelapanik.com/static/js/2.a39087cc.chunk.js.LICENSE.txt"
+    "static/css/main.b0e028ed.chunk.css.map": "https://saimelapanik.com/static/css/main.b0e028ed.chunk.css.map",
+    "static/js/2.9e349b65.chunk.js.LICENSE.txt": "https://saimelapanik.com/static/js/2.9e349b65.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ff9b6ab8.js",
-    "static/js/2.a39087cc.chunk.js",
-    "static/css/main.1ae50da0.chunk.css",
-    "static/js/main.0781abd7.chunk.js"
+    "static/js/runtime-main.bf133254.js",
+    "static/js/2.9e349b65.chunk.js",
+    "static/css/main.b0e028ed.chunk.css",
+    "static/js/main.9538267c.chunk.js"
   ]
 }

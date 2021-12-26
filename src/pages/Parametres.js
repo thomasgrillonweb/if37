@@ -6,7 +6,8 @@ import './Parametres.css';
 const Parametres = (props) => {
     return (
         <div className="background">
-            <div>Parametres</div>
+            <div className="page-title">Parametres</div>
+            <p style={{paddingLeft: '2em'}}>Aucun paramètres disponible.</p>
             <Navbar />
         </div>
       );
