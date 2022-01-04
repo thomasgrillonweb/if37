@@ -4,10 +4,15 @@ import Navbar from "../components/Navbar";
 import './Parametres.css';
 
 const Parametres = (props) => {
+
+    const deleteHistory = () => {
+        localStorage.removeItem('historyAllergens');
+    }
+
     return (
         <div className="background">
             <div className="page-title">Parametres</div>
-            <p style={{paddingLeft: '2em'}}>Aucun paramètres disponible.</p>
+            <div className="btn-delete-history" onClick={deleteHistory}>Effacer l'historique</div>
             <Navbar />
         </div>
       );

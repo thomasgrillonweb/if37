@@ -1,0 +1,15 @@
+.btn-delete-history{
+    background-color: rgb(245, 245, 245);
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-size: 1.3em;
+    padding: 5px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border: solid 1px black;
+    font-weight: bold;
+}

@@ -6,7 +6,7 @@ import './Historique.css';
 
 const Historique = (props) => {
 
-    const history = JSON.parse(localStorage.getItem('historyAllergens'))
+    const history = JSON.parse(localStorage.getItem('historyAllergens'))?.reverse()
 
     return (
         <div className="background">
