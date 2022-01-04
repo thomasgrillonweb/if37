@@ -24,9 +24,9 @@
 
 .isGood::after {
     position: absolute;
-    content: 'Cliquez pour faire disparaître';
+    content: 'Cliquez pour voir plus...';
     top: 56%;
-    left: 21%;
+    left: 44%;
 
     font-size: 1.2em;
 }

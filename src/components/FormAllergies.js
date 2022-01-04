@@ -21,18 +21,41 @@ const FormAllergies = (props) => {
     }*/
 
     const allergensList = [
-      {key: 'gluten', value: 'Gluten'},
-      {key: 'oeuf', value: 'Oeuf'},
-      {key: 'poisson', value: 'Poisson'},
-      {key: 'arachide', value: 'Arachide'},
-      {key: 'soja', value: 'Soja'},
-      {key: 'lait', value: 'Lait'},
       {key: 'amande', value: 'Amande'},
-      {key: 'noisette', value: 'Noisette'},
+      {key: 'arachide', value: 'Arachide'},
+      {key: 'blé', value: 'Blé'},
       {key: 'cajou', value: 'Cajou'},
-      {key: 'césame', value: 'Césame'},
-      {key: 'céleri', value: 'Céleri'}
+      {key: 'céleri', value: 'Céleri'},
+      {key: 'coque', value: 'Fruit à coque'},
+      {key: 'gluten', value: 'Gluten'},
+      {key: 'ketchup', value: 'Ketchup'},
+      {key: 'lait', value: 'Lait'},
+      {key: 'malte', value: 'Malte'},
+      {key: 'moutarde', value: 'Moutarde'},
+      {key: 'noisette', value: 'Noisette'},
+      {key: 'oeuf', value: 'Oeuf'},
+      {key: 'orge', value: 'Orge'},
+      {key: 'phénoxyéthanol', value: 'Phénoxyéthanol'},
+      {key: 'poisson', value: 'Poisson'},
+      {key: 'sésame', value: 'Sésame'},
+      {key: 'soja', value: 'Soja'}
     ];
+
+    /*
+    {"product":"Ketchup","allergens":["ketchup"]}
+    {"product":"Bière","allergens":["blé","orge","malte"]}
+    {"product":"X-TRA Total","allergens":["phénoxyéthanol"]}
+    {"product":"Ravioli","allergens":["oeuf","lait","céleri","gluten"]}
+    {"product":"Petit salé","allergens":["gluten"]}
+    {"product":"Sauce provençale","allergens":["céleri","lait","moutarde"]}
+    {"product":"Burger maxi","allergens":["gluten","sésame","lait","oeuf"]}
+    {"product":"Velouté aux légumes","allergens":["gluten","céleri","oeuf","lait"]}
+    {"product":"Petits pois extra fins","allergens":[""]}
+    {"product":"Lait de coco","allergens":[""]}
+    {"product":"Purée Mouseline","allergens":["lait"]}
+    {"product":"Pesto basilico","allergens":["cajou","coque"]}
+    {"product":"Monster munch","allergens":["blé","arachide","lait"]}
+    */
 
     return <form className="form-allergens" /*onSubmit={handleSubmit(onSubmit)}*/>
 
@@ -41,18 +64,6 @@ const FormAllergies = (props) => {
         let isSelected = userAllergens.includes(element.key);
         return <option className={'option-select'} value={element.key} key={index} selected={isSelected}>{element.value}</option>
       })}
-      
-      {/*<option className="option-select" value="gluten">Gluten</option>
-      <option className="option-select" value="oeuf">Oeuf</option>
-      <option className="option-select" value="poisson">Poisson</option>
-      <option className="option-select" value="arachide">Arachide</option>
-      <option className="option-select" value="soja">Soja</option>
-      <option className="option-select" value="lait">Lait</option>
-      <option className="option-select" value="amande">Amande</option>
-      <option className="option-select" value="noisette">Noisette</option>
-      <option className="option-select" value="cajou">Cajou</option>
-      <option className="option-select" value="césame">Césame</option>
-  <option className="option-select" value="céleri">Céleri</option>*/}
     </select>
 
     {/*<input type="submit" className="submit-btn"/>*/}
