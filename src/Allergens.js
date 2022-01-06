@@ -18,12 +18,19 @@ function Allergens() {
 
         {productAllergens.allergens.map((element, index) => {
           let isRisky = userAllergens.includes(element);
-          return <div className={isRisky ? 'btn btn-white isRisky' : 'btn btn-white'} key={index}>{element}</div>
+          return <div style={{textTransform: "capitalize"}} className={isRisky ? 'btn btn-white isRisky' : 'btn btn-white'} key={index}>{element}</div>
         })}
       </div>
 
       <div className="product" style={{marginTop:"3em"}}>Alternative de produit</div>
-      {productAllergens?.alt ? <div className="product-alt">{productAllergens?.alt}</div> : <div className="product-alt">Aucun produit similaire disponible</div>}
+
+      {productAllergens?.alt ? 
+        productAllergens.alt.map((element, index) => {
+          return <div key={index} className="product-alt">{element}</div>
+        })
+        : 
+        <div className="product-alt">Aucun produit similaire disponible</div>
+      }
 
       <div className="btn-retour"><Link to="/">Retour</Link></div>
     </div>

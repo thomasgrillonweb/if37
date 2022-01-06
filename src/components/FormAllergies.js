@@ -57,6 +57,18 @@ const FormAllergies = (props) => {
     {"product":"Monster munch","allergens":["blé","arachide","lait"]}
     
     {"product":"Monster munch","alt":"chips","allergens":["blé","arachide","lait"]}
+
+    vidéo : 
+    allergies : sésame, lait, cajou
+    qrcodes : 
+      WRONG
+      {"product":"Pesto basilico","alt":["Chimichurri", "Gremolata"],"allergens":["cajou"]}
+      {"product":"Monster munch","alt":["Chips à l'ancienne"],"allergens":["blé","arachide","lait"]}
+      {"product":"Sauce provençale CARREFOUR","alt":["Sauce provençale PANZANI"],"allergens":["céleri","lait","moutarde"]}
+      RIGHT
+      {"product":"Petit salé","allergens":["gluten"]}
+      {"product":"Lait de coco","allergens":[""]}
+
     */
 
     return <form className="form-allergens" /*onSubmit={handleSubmit(onSubmit)}*/>
