@@ -23,15 +23,14 @@ class QrContainer extends Component {
 
         history.push(product)
         localStorage.setItem('historyAllergens', JSON.stringify(history));
-    } 
+    }
 
     handleScan(data){
         if(this.state.isGood === null){
             console.log('Scanning...')
             let parseData = JSON.parse(data);
             console.log(parseData)
-            if(parseData?.allergens && parseData?.product && Array.isArray(parseData.allergens)){
-
+            if(parseData?.allergens && parseData?.product && Array.isArray(parseData?.allergens)){
                 this.addHistory(parseData);
 
                 const tabData = parseData.allergens;

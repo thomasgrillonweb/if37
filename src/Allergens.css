@@ -30,3 +30,19 @@
     justify-content: center;
     align-items: center;
 }
+
+.product-alt{
+    border: 1px solid black;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgba(255, 253, 240, 0.877);
+}

@@ -55,6 +55,8 @@ const FormAllergies = (props) => {
     {"product":"Purée Mouseline","allergens":["lait"]}
     {"product":"Pesto basilico","allergens":["cajou","coque"]}
     {"product":"Monster munch","allergens":["blé","arachide","lait"]}
+    
+    {"product":"Monster munch","alt":"chips","allergens":["blé","arachide","lait"]}
     */
 
     return <form className="form-allergens" /*onSubmit={handleSubmit(onSubmit)}*/>
